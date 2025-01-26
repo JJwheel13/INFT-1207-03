@@ -1,9 +1,9 @@
+# Import Libraries
 import random
 import string
 
-
+# Get_User_Input Function: Retrieves and Validates User Input for Password Generation
 def get_user_input():
-    """Gets user input for password generation and validates it."""
     while True:
         try:
             total_length = int(input("Enter the total length of the password: "))
@@ -24,13 +24,14 @@ def get_user_input():
                     "The sum of letters, digits, and special characters exceeds the total length. Please enter valid values.")
                 continue
 
+            total_length = letters + digits + special_chars
+
             return total_length, letters, digits, special_chars
         except ValueError:
             print("Invalid input. Please enter integers only.")
 
-
+# Generate_Password Function: Generates a Secure Password based on user-specified criteria
 def generate_password(total_length, letters, digits, special_chars):
-    """Generates a secure password based on user-specified criteria."""
     # Generate required characters
     chosen_letters = random.choices(string.ascii_letters, k=letters)
     chosen_digits = random.choices(string.digits, k=digits)
@@ -47,18 +48,21 @@ def generate_password(total_length, letters, digits, special_chars):
     # Return the final password as a string
     return ''.join(password_list)
 
-
+# Main Function: Directs processes and outputs final results
 def main():
-    """Main function to drive the password generator."""
+    # Retrieve User Input
     total_length, letters, digits, special_chars = get_user_input()
+
+    # Generate Password
     password = generate_password(total_length, letters, digits, special_chars)
 
+    # Output the Results to the User
     print("\nYour desired password is:", password)
     print("Password successfully generated with:")
     print(f"- Letters: {letters}")
     print(f"- Digits: {digits}")
     print(f"- Special characters: {special_chars}")
 
-
+# Initialize the Program
 if __name__ == "__main__":
     main()
