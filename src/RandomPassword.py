@@ -3,7 +3,7 @@ import random
 import string
 
 # Get_User_Input Function: Retrieves and Validates User Input for Password Generation
-def get_user_input():
+def get_user_input(): # Karim
     while True:
         try:
             total_length = int(input("Enter the total length of the password: "))
@@ -31,7 +31,7 @@ def get_user_input():
             print("Invalid input. Please enter integers only.")
 
 # Generate_Password Function: Generates a Secure Password based on user-specified criteria
-def generate_password(total_length, letters, digits, special_chars):
+def generate_password(total_length, letters, digits, special_chars): # Justin
     # Generate required characters
     chosen_letters = random.choices(string.ascii_letters, k=letters)
     chosen_digits = random.choices(string.digits, k=digits)
