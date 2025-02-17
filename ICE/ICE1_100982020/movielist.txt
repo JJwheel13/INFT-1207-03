@@ -1,0 +1,8 @@
+("Interstellar", 165000000)
+("The Dark Knight", 185000000)
+("Inception", 160000000)
+("Titanic", 200000000)
+("Avengers: Infinity War", 316000000)
+("Frozen II", 150000000)
+("Joker", 55000000)
+("Civil War", 50000000)

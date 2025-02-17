@@ -2,7 +2,6 @@ import csv
 
 BOOKS_FILE = 'books.csv'
 
-
 # Utility function to read all books from the CSV file
 def read_books():
     try:
